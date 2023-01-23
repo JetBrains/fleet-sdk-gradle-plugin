@@ -2,7 +2,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/jetbrains_fleet?style=flat&logo=twitter)][jb:twitter]
 
 # Fleet Gradle Plugin
-The Gradle Fleet Plugin is a plugin for the Gradle build system to help configuring your environment for building and publishing plugins for Fleet.
+The Fleet Gradle Plugin is a plugin for the Gradle build system to help configuring your environment for building and publishing plugins for Fleet.
 
 # Usage
 
