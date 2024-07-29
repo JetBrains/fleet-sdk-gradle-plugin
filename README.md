@@ -11,12 +11,9 @@ plugins for Fleet.
 
 ## Getting started
 
-1. Use one of our GitHub templates to bootstrap your plugin's repository (see [Templates section](#templates))
-2. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup](./docs/marketplace_publishing_setup.md)
-
-## Templates
-
-1. [Fleet Theme Plugin template][fleet:theme-template-repo]
+1. Use the [Fleet Theme Plugin template][fleet:template-repo] to bootstrap your plugin's repository
+2. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup][fleet:marketplace-publishing]
+3. (optional) Take a look at [example plugins directory][fleet:example-plugins]
 
 ## Gradle tasks
 
@@ -33,20 +30,16 @@ Here is the list of tasks that the Fleet SDK Gradle plugin provide to your proje
 
 1. [Fleet Plugin documentation][fleet:plugin-docs]
 1. [SDK configuration (DSLs)](./docs/dsl.md), to know more about how to configure the SDK
-2. [Layout of plugin's code built using the SDK](./docs/code_layout.md)
-3. TODO: add Fleet API documentation here
-4. TODO: add Fleet Theme documentation here
-
-## Example plugins
-
-1. TicTacToe plugin [fleet-plugins-private-preview/fleet-tictactoe-plugin][fleet:tictactoe-repo]
-2. Fleet plugin requiring a Fleet Backend plugin [vladsoroka/gradle-daemons-services][fleet:gradle-daemons-repo]
+3. [Example plugins][fleet:example-plugins]
+4. [Layout of plugin's code built using the SDK](./docs/code_layout.md)
+5. TODO: add Fleet API documentation here
+6. TODO: add Fleet Theme documentation here
 
 <!-- ---------------- -->
 
 [jb:twitter]: https://twitter.com/jetbrains_fleet
 [jb:github]: https://github.com/JetBrains/.github/blob/main/profile/README.md
-[fleet:theme-template-repo]: https://github.com/JetBrains/fleet-plugin-template
-[fleet:gradle-daemons-repo]: https://github.com/vladsoroka/gradle-daemons-services
-[fleet:tictactoe-repo]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-tictactoe-plugin/
+[fleet:template-repo]: https://github.com/JetBrains/fleet-plugin-template
 [fleet:plugin-docs]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-plugins-docs
+[fleet:example-plugins]: ./example-plugins/README.md
+[fleet:marketplace-publishing]: ./docs/marketplace_publishing_setup.md
