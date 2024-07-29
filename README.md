@@ -40,6 +40,6 @@ Here is the list of tasks that the Fleet SDK Gradle plugin provide to your proje
 [jb:twitter]: https://twitter.com/jetbrains_fleet
 [jb:github]: https://github.com/JetBrains/.github/blob/main/profile/README.md
 [fleet:template-repo]: https://github.com/JetBrains/fleet-plugin-template
+[fleet:marketplace-publishing]: ./docs/marketplace_publishing_setup.md
 [fleet:plugin-docs]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-plugins-docs
 [fleet:example-plugins]: ./example-plugins/README.md
-[fleet:marketplace-publishing]: ./docs/marketplace_publishing_setup.md
