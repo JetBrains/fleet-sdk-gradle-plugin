@@ -1,57 +1,52 @@
 [![official JetBrains project](https://jb.gg/badges/official.svg)][jb:github]
 [![Twitter Follow](https://img.shields.io/twitter/follow/jetbrains_fleet?style=flat&logo=twitter)][jb:twitter]
 
-# Fleet Gradle Plugin
-The Fleet Gradle Plugin is a plugin for the Gradle build system to help configuring your environment for building and publishing plugins for Fleet.
+# Fleet SDK Gradle Plugins
 
-# Usage
+The Fleet SDK is a collection of plugins for the Gradle build system to help configuring your environment for building and publishing
+plugins for Fleet.
 
-```kotlin
+> [!CAUTION]
+> 🚧 Building Fleet plugins is not yet available publically, this repository is under construction, links and instructions will not work. 🚧
 
-plugins {
-    kotlin("jvm") version "1.8.0"
-    `kotlin-dsl`
-    id("org.jetbrains.fleet") version "0.2-SNAPSHOT"
-}
+## Getting started
 
-fleet {
-    fleetVersion.set("1.15.6")
+1. Use one of our GitHub templates to bootstrap your plugin's repository (see [Templates section](#templates))
+2. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup](./docs/marketplace_publishing_setup.md)
 
-    common {
-        // add common dependencies with add(...)
-    }
+## Templates
 
-    frontend {
-        // add frontend dependencies with add(...)
-    }
+1. [Fleet Theme Plugin template][fleet:theme-template-repo]
 
-    workspace {
-        // add workspace dependencies with add(...)
-    }
+## Gradle tasks
 
-    plugins.addAll(
-        "fleet.run" // add dependencies to other plugins
-    )
-}
+Here is the list of tasks that the Fleet SDK Gradle plugin provide to your project:
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven("https://cache-redirector.jetbrains.com/intellij-dependencies")
-}
-```
+| Task name                 | Command                                                                                   | Description                                                                                                                  | Requires Marketplace Token       |
+|---------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
+| runFleet                  | `./gradlew runFleet`                                                                      | runs Fleet locally with your plugin and its dependencies automatically loaded                                                | No                               |
+| distZip                   | `./gradlew distZip -Porg.jetbrains.fleet-plugin.marketplaceUploadToken=<your_token>`      | assembles a `.zip` containing metadata, your plugin layers jars and all dependency jars that are relevant, ready for upload. | Yes, to infer vendor information |
+| uploadPlugin              | `./gradlew uploadPlugin -Porg.jetbrains.fleet-plugin.marketplaceUploadToken=<your_token>` | uploads the distribution built by `distZip` to Marketplace.                                                                  | Yes                              |
+| deleteAllDownloadedCaches | `./gradlew deleteAllDownloadedCaches`                                                     | Deletes all caches downloaded by the `org.jetbrains.fleet-plugin` (/!\ regardless of the Gradle project)                     | No                               |
 
-## Useful tasks
+## Documentations
 
-### runFleet
-To run Fleet with your plugin, you can use the runFleet task. This will start Fleet and automatically load your plugin.
+1. [Fleet Plugin documentation][fleet:plugin-docs]
+1. [SDK configuration (DSLs)](./docs/dsl.md), to know more about how to configure the SDK
+2. [Layout of plugin's code built using the SDK](./docs/code_layout.md)
+3. TODO: add Fleet API documentation here
+4. TODO: add Fleet Theme documentation here
 
-```./gradlew runFleet```
+## Example plugins
 
-### distZip
-To build a distribution zip for your plugin, you can use the distZip task. This will create a zip file containing your plugin and all of its dependencies, ready for distribution.
+1. TicTacToe plugin [fleet-plugins-private-preview/fleet-tictactoe-plugin][fleet:tictactoe-repo]
+2. Fleet plugin requiring a Fleet Backend plugin [vladsoroka/gradle-daemons-services][fleet:gradle-daemons-repo]
 
-```./gradlew distZip```
+<!-- ---------------- -->
 
 [jb:twitter]: https://twitter.com/jetbrains_fleet
 [jb:github]: https://github.com/JetBrains/.github/blob/main/profile/README.md
+[fleet:theme-template-repo]: https://github.com/JetBrains/fleet-plugin-template
+[fleet:gradle-daemons-repo]: https://github.com/vladsoroka/gradle-daemons-services
+[fleet:tictactoe-repo]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-tictactoe-plugin/
+[fleet:plugin-docs]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-plugins-docs
