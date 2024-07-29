@@ -12,6 +12,11 @@ plugins for Fleet.
 ## Getting started
 
 1. Use the [Fleet Theme Plugin template][fleet:template-repo] to bootstrap your plugin's repository
+3. Specify in `my-plugin/build.gradle.kts` (you will find commented out value to replace in that file)
+    1. your plugin `fleetPlugin.id`
+    2. your plugin `fleetPlugin.metadata.readableName`
+    3. your plugin `fleetPlugin.metadata.description`
+3. (optional) Feel free to rename `my-plugin` directory, but don't forget to update values in `settings.gradle.kts`'s `include()` when doing so. 
 2. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup][fleet:marketplace-publishing]
 3. (optional) Take a look at [example plugins directory][fleet:example-plugins]
 
