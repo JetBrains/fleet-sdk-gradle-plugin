@@ -4,7 +4,7 @@
 # Fleet SDK Gradle Plugins
 
 The Fleet SDK is a collection of plugins for the [Gradle][gradle] build system to help to configure your environment for building
-and publishing plugins for [Fleet][fleet:website].
+and publishing plugins for [JetBrains Fleet][fleet:website].
 
 ## Getting started
 
