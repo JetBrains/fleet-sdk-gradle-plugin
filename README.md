@@ -30,7 +30,6 @@ Here is the list of tasks that the JetBrains Fleet SDK Gradle plugin provide to 
 
 ## Documentations
 
-- [JetBrains Fleet Plugin documentation][fleet:plugin-docs]
 - [Example plugins][fleet:example-plugins]
 - TODO: [Theme Documentation]<!--TODO: [fleet:theme-documentation]-->
 - TODO: [Fleet API documentation]<!--TODO: [fleet:api-documentation]-->
