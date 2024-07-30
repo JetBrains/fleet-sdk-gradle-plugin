@@ -3,22 +3,19 @@
 
 # Fleet SDK Gradle Plugins
 
-The Fleet SDK is a collection of plugins for the Gradle build system to help configuring your environment for building and publishing
-plugins for Fleet.
-
-> [!CAUTION]
-> 🚧 Building Fleet plugins is not yet available publically, this repository is under construction, links and instructions will not work. 🚧
+The Fleet SDK is a collection of plugins for the [Gradle][gradle] build system to help to configure your environment for building
+and publishing plugins for [Fleet][[fleet:website].
 
 ## Getting started
 
-1. Use the [Fleet Theme Plugin template][fleet:template-repo] to bootstrap your plugin's repository
-3. Specify in `my-plugin/build.gradle.kts` (you will find commented out value to replace in that file)
+1. Use the [Fleet Theme Plugin template][fleet:theme-plugin-template-repository] to bootstrap your plugin's repository
+2. Specify in `my-theme-plugin/build.gradle.kts` (you will find commented out value to replace in that file)
     1. your plugin `fleetPlugin.id`
     2. your plugin `fleetPlugin.metadata.readableName`
     3. your plugin `fleetPlugin.metadata.description`
-3. (optional) Feel free to rename `my-plugin` directory, but don't forget to update values in `settings.gradle.kts`'s `include()` when doing so. 
-2. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup][fleet:marketplace-publishing]
-3. (optional) Take a look at [example plugins directory][fleet:example-plugins]
+3. (optional) Feel free to rename `my-theme-plugin` directory, but don't forget to update values in `settings.gradle.kts`'s `include()` when doing so. 
+4. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup][fleet:marketplace-publishing]
+5. (optional) Take a look at [example plugins][fleet:example-plugins]
 
 ## Gradle tasks
 
@@ -33,18 +30,18 @@ Here is the list of tasks that the Fleet SDK Gradle plugin provide to your proje
 
 ## Documentations
 
-1. [Fleet Plugin documentation][fleet:plugin-docs]
-1. [SDK configuration (DSLs)](./docs/dsl.md), to know more about how to configure the SDK
-3. [Example plugins][fleet:example-plugins]
-4. [Layout of plugin's code built using the SDK](./docs/code_layout.md)
-5. TODO: add Fleet API documentation here
-6. TODO: add Fleet Theme documentation here
-
-<!-- ---------------- -->
+- [Fleet Plugin documentation][fleet:plugin-docs]
+- [Example plugins][fleet:example-plugins]
+- TODO: [Theme Documentation]<!--TODO: [fleet:theme-documentation]-->
+- TODO: [Fleet API documentation]<!--TODO: [fleet:api-documentation]-->
+- [SDK configuration (DSLs)](./docs/dsl.md), to know more about how to configure the SDK
+- [Layout of plugin's code built using the SDK](./docs/code_layout.md)
 
 [jb:twitter]: https://twitter.com/jetbrains_fleet
 [jb:github]: https://github.com/JetBrains/.github/blob/main/profile/README.md
-[fleet:template-repo]: https://github.com/JetBrains/fleet-plugin-template
+[gradle]: https://gradle.org/
+[fleet:website]: https://www.jetbrains.com/fleet/
+[fleet:theme-plugin-template-repository]: https://github.com/JetBrains/fleet-theme-plugin-template
 [fleet:marketplace-publishing]: ./docs/marketplace_publishing_setup.md
 [fleet:plugin-docs]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-plugins-docs
-[fleet:example-plugins]: ./example-plugins/README.md
+[fleet:example-plugins]: examples/README.md
