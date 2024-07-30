@@ -13,13 +13,19 @@ To create your own theme:
 1. Create a `.json` file in `my-plugin/frontendImpl/src/jvmMain/resources/`, e.g. `my-super-theme.json`
 2. Declare it in your plugin's code in `MyPlugin.kt` like so
 ```kotlin
-class MyPlugin : Plugin<Unit> {
+import fleet.dock.api.ThemeId
+import fleet.frontend.theme.registerTheme
+import fleet.kernel.plugins.ContributionScope
+import fleet.kernel.plugins.Plugin
+import fleet.kernel.plugins.PluginScope
+
+class MyThemePlugin : Plugin<Unit> {
     companion object : Plugin.Key<Unit>
 
-    override val key: Plugin.Key<Unit> = MyPlugin
+    override val key: Plugin.Key<Unit> = MyThemePlugin
 
     override fun ContributionScope.load(pluginScope: PluginScope) {
-        newTheme(ThemeId(ident = "my-super-theme"))
+        registerTheme(ThemeId(id = "my-super-theme"))
     }
 }
 ```
