@@ -1,14 +1,14 @@
 [![official JetBrains project](https://jb.gg/badges/official.svg)][jb:github]
 [![Twitter Follow](https://img.shields.io/twitter/follow/jetbrains_fleet?style=flat&logo=twitter)][jb:twitter]
 
-# Fleet SDK Gradle Plugins
+# JetBrains Fleet SDK Gradle Plugins
 
-The Fleet SDK is a collection of plugins for the [Gradle][gradle] build system to help to configure your environment for building
+The JetBrains Fleet SDK is a collection of plugins for the [Gradle][gradle] build system to help to configure your environment for building
 and publishing plugins for [JetBrains Fleet][fleet:website].
 
 ## Getting started
 
-1. Use the [Fleet Theme Plugin template][fleet:theme-plugin-template-repository] to bootstrap your plugin's repository
+1. Use the [JetBrains Fleet Theme Plugin template][fleet:theme-plugin-template-repository] to bootstrap your plugin's repository
 2. Specify in `my-theme-plugin/build.gradle.kts` (you will find commented out value to replace in that file)
     1. your plugin `fleetPlugin.id`
     2. your plugin `fleetPlugin.metadata.readableName`
@@ -19,7 +19,7 @@ and publishing plugins for [JetBrains Fleet][fleet:website].
 
 ## Gradle tasks
 
-Here is the list of tasks that the Fleet SDK Gradle plugin provide to your project:
+Here is the list of tasks that the JetBrains Fleet SDK Gradle plugin provide to your project:
 
 | Task name                 | Command                                                                                   | Description                                                                                                                  | Requires Marketplace Token       |
 |---------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
@@ -30,7 +30,7 @@ Here is the list of tasks that the Fleet SDK Gradle plugin provide to your proje
 
 ## Documentations
 
-- [Fleet Plugin documentation][fleet:plugin-docs]
+- [JetBrains Fleet Plugin documentation][fleet:plugin-docs]
 - [Example plugins][fleet:example-plugins]
 - TODO: [Theme Documentation]<!--TODO: [fleet:theme-documentation]-->
 - TODO: [Fleet API documentation]<!--TODO: [fleet:api-documentation]-->
