@@ -10,8 +10,8 @@ Follow the [Getting Started][fleet:getting-started] instructions.
 > Need an example of a theme plugin? See our [Theme plugin example][fleet:theme-plugin-example]
 
 To create your own theme:
-1. Create a `.json` file in `my-plugin/frontendImpl/src/jvmMain/resources/`, e.g. `my-super-theme.json`
-2. Declare it in your plugin's code in `MyPlugin.kt` like so
+1. Create a `.json` file in `my-theme-plugin/frontendImpl/src/jvmMain/resources/`, e.g. `my-super-theme.json`
+2. Declare it in your plugin's code in `MyThemePlugin.kt` like so
 ```kotlin
 import fleet.dock.api.ThemeId
 import fleet.frontend.theme.registerTheme
