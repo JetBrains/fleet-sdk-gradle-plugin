@@ -8,14 +8,7 @@ and publishing plugins for [JetBrains Fleet][fleet:website].
 
 ## Getting started
 
-1. Use the [JetBrains Fleet Theme Plugin template][fleet:theme-plugin-template-repository] to bootstrap your plugin's repository
-2. Specify in `my-theme-plugin/build.gradle.kts` (you will find commented out value to replace in that file)
-    1. your plugin `fleetPlugin.id`
-    2. your plugin `fleetPlugin.metadata.readableName`
-    3. your plugin `fleetPlugin.metadata.description`
-3. (optional) Feel free to rename `my-theme-plugin` directory, but don't forget to update values in `settings.gradle.kts`'s `include()` when doing so. 
-4. (optional) Once ready to publish your plugin, follow the [Marketplace Publishing Setup][fleet:marketplace-publishing]
-5. (optional) Take a look at [example plugins][fleet:example-plugins]
+- [Quick start guide: building a theme plugin in Fleet][fleet:quick-start-theme-plugin]
 
 ## Gradle tasks
 
@@ -30,6 +23,7 @@ Here is the list of tasks that the JetBrains Fleet SDK Gradle plugin provide to 
 
 ## Documentations
 
+- [Quick start guide: building a theme plugin in Fleet][fleet:quick-start-theme-plugin]
 - [Example plugins][fleet:example-plugins]
 - TODO: [Theme Documentation]<!--TODO: [fleet:theme-documentation]-->
 - TODO: [Fleet API documentation]<!--TODO: [fleet:api-documentation]-->
@@ -41,6 +35,6 @@ Here is the list of tasks that the JetBrains Fleet SDK Gradle plugin provide to 
 [gradle]: https://gradle.org/
 [fleet:website]: https://www.jetbrains.com/fleet/
 [fleet:theme-plugin-template-repository]: https://github.com/JetBrains/fleet-theme-plugin-template
-[fleet:marketplace-publishing]: ./docs/marketplace_publishing_setup.md
 [fleet:plugin-docs]: https://jetbrains.team/p/fleet-plugins-private-preview/repositories/fleet-plugins-docs
 [fleet:example-plugins]: examples/README.md
+[fleet:quick-start-theme-plugin]: https://www.jetbrains.com/help/fleet/building-custom-theme-plugins.html
